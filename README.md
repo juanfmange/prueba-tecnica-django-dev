@@ -413,37 +413,37 @@ python3 manage.py runserver
 
 Para el caso de registro de usuario:
 
-![user_register](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_register.png)
+![user_register](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_register.png)
 
 Para el caso de login de usuario, podemos observar que obtenemos como respuesta el JWT
 
-![user_login](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_login.png)
+![user_login](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_login.png)
 
 Tambien podemos saber que usuario esta logeado:
 
-![user_user](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_user.png)
+![user_user](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_user.png)
 
 De igual forma podemos observar su cookie:
 
-![user_cookie](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_cookie.png)
+![user_cookie](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_cookie.png)
 
 Logout de usuario:
 
-![user_logout](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_logout.png)
+![user_logout](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_logout.png)
 
 para el caso del token de usuario:
 
-![user_token](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_token.png)
+![user_token](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_token.png)
 
 Tambien podemos observar que al momento de querer hacer un login con un usuario a contraseña incorrecta tenemos respuesta para cada caso:
 
-![user_b_user](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_b_user.png)
+![user_b_user](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_b_user.png)
 
-![user_b_password](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_b_password.png)
+![user_b_password](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_b_password.png)
 
 o si no tenemos un usuario logeado:
 
-![user_b_login](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_b_login.png)
+![user_b_login](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/user_b_login.png)
 
 Para el modelo Bienes, declaramos el serializer:
 
@@ -593,24 +593,24 @@ En el caso de los bienes, trabajamos directamente con el id del cada bien para p
 
 Para ver los bienes registrados:
 
-![products_products](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/products_products.png)
+![products_products](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/products_products.png)
 
 Podemos agregar un bien nuevo desde la api:
 
-![products_add](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/products_add.png)
+![products_add](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/product_add.png)
 
 si queremos agregar un bien que tenga un usuario que no exista:
 
-![products_b_add](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/products_b_add.png)
+![products_b_add](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/product_b_add.png)
 
 Modificar un bien agregando a la url el id del bien a modificar:
 
-![products_put](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/products_put.png)
+![products_put](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/product_put.png)
 
 Obtener un bien por su id en la url:
 
-![product_by_id](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/product_by_id.png)
+![product_by_id](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/product_by_id.png)
 
 Eliminar un bien de igual forma agregando a la url el id del bien a eliminar:
 
-![product_delete](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/product_delete.png)
+![product_delete](https://github.com/juanfmange/prueba-tecnica-django-dev/blob/main/img/product_delete.png)
