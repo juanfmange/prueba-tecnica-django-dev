@@ -7,7 +7,8 @@ import jwt
 import datetime
 
 
-# Create your views here.
+# Create your views here
+# Resgistro de usuario
 class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -18,6 +19,7 @@ class RegisterView(APIView):
         return Response(serializer.data)
 
 
+### Login usuario con jwt
 class LoginView(APIView):
     def post(self, request):
         username = request.data['username']
@@ -50,7 +52,7 @@ class LoginView(APIView):
 
         return response
 
-
+# usuario logeado
 class UserView(APIView):
 
     def get(self, request):
@@ -70,6 +72,7 @@ class UserView(APIView):
         return Response(serializer.data)
 
 
+# logout de usuario
 class LogoutView(APIView):
     def post(self, request):
         response = Response()
@@ -81,6 +84,7 @@ class LogoutView(APIView):
         return response
 
 
+# cookie de usuario logeado
 class Cookie(APIView):
 
     def get(self, request):
