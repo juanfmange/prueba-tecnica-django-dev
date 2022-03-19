@@ -1,7 +1,9 @@
 # Prueba tecnica desarrollador Django #
+
 *Este repositorio es parte de la prueba técnica para desarrollador backend Django*
 
 ##### Herramientas implementadas
+
 * Django Rest Framework
 * Postgres
 * Pandas
@@ -10,13 +12,14 @@
 * Thunder Client
 
 ## Caso de uso
+
 Desarrollar un API Rest con la ayuda de Django Rest Framework. Respuestas y envío de información mediante JSON.
 
-
 ### Implementación
+
 Se desarrollo un modelo base para el proyecto, donde se gestionan los otros modelos (usuarios,bienes).
 
-En setting.py, agregué las nuevas aplicaciones al modelo base:
+En setting.py, se agregaron las nuevas aplicaciones al modelo base:
 
 ```python
 INSTALLED_APPS = [
@@ -32,7 +35,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-Agregué el middleware para corsheaders:
+Se agregó el middleware para corsheaders:
 
 ```python
 MIDDLEWARE = [
@@ -42,7 +45,7 @@ MIDDLEWARE = [
 ]
 ```
 
-Para la conexión de la api a la base de datos de postgres utilizé la libreria psycopg2:
+Para la conexión de la api a la base de datos de postgres utilizamos la libreria psycopg2:
 
 ```python
 DATABASES = {
@@ -82,7 +85,7 @@ path('api/',include('products.urls')),
 ]
 ```
 
-Creé el modelo de usuario en users.models.py:
+Se creó el modelo de usuario en users.models.py:
 
 ```python
 class User(AbstractUser):
@@ -106,9 +109,9 @@ return self.name
 
 ```
 
-Implementé la clase AbstractUser de Django para la autentificación del usuario mediante la api.
+Se implementó la clase AbstractUser de Django para la autentificación del usuario mediante la api.
 
-Creé el modelo de bienes en products.models.py heredando el modelo de usuario para poder trabajar con mi modelo de usuario:
+Se creó el modelo de bienes en products.models.py heredando el modelo de usuario para poder trabajar con mi modelo de usuario:
 
 ```python
 from django.db import models
@@ -133,14 +136,14 @@ modified = models.DateTimeField(auto_now=True)
 
 ```
 
-Con el modelo usuario heredado para los bienes, puedo generar una ForeignKey para hacer una relación uno a muchos, es decir, el usuario puede tener varios bienes, pero los bienes solo pueden tener un usuario., En dado caso de que el usuario sea eliminado, tambien sus bienes se irán para asi poder tener una identidad referencial en la base de datos y evitando almacenar datos corruptos.
+Con el modelo usuario heredado para los bienes, podemos generar una ForeignKey para hacer una relación uno a muchos, es decir, el usuario puede tener varios bienes, pero los bienes solo pueden tener un usuario., En dado caso de que el usuario sea eliminado, tambien sus bienes se irán para asi poder tener una identidad referencial en la base de datos y evitando almacenar datos corruptos.
 
-Posteriormente, realizamos la migración de los modelos:
+Posteriormente, se realizarón las migración de los modelos:
 
 ```bash
-$ python3 manage.py makemigrations
+python3 manage.py makemigrations
 
-$ python3 manage.py migrate
+python3 manage.py migrate
 
 ```
 
@@ -372,7 +375,6 @@ return instance
 
 ```
 
-
 para terminar de trabajar con usuarios, declaramos las urls:
 
 ```python
@@ -404,6 +406,10 @@ name='token_obtain_pair'),
 ```
 
 Corremos el servidor para trabajar con la api:
+
+```bash
+python3 manage.py runserver
+```
 
 Para el caso de registro de usuario:
 
@@ -438,8 +444,6 @@ Tambien podemos observar que al momento de querer hacer un login con un usuario 
 o si no tenemos un usuario logeado:
 
 ![user_b_login](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/user_b_login.png)
-
-
 
 Para el modelo Bienes, declaramos el serializer:
 
@@ -590,7 +594,6 @@ En el caso de los bienes, trabajamos directamente con el id del cada bien para p
 Para ver los bienes registrados:
 
 ![products_products](/home/juanmange/Documentos/python/PruebaTecnicaDjango/base/img/products_products.png)
-
 
 Podemos agregar un bien nuevo desde la api:
 
